@@ -1,0 +1,7 @@
+qat:
+  host: 'localhost'
+  port: 49161
+  database: 'xe'
+  username: 'system'
+  password: 'oracle'
+  adapter: 'oracle'
