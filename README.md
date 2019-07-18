@@ -2,7 +2,7 @@
 
 # QAT::DB
 
-- Welcome to the Qat DB gem!
+- Welcome to the QAT DB gem!
 
 - This gem is an extension of Sequel gem that support different types of of database connections management:
   - **Create and manage database connections;**
