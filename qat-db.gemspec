@@ -13,12 +13,12 @@ Gem::Specification.new do |gem|
   gem.homepage = 'https://github.com/readiness-it/qat-db'
 
   gem.authors = ['QAT']
-  gem.license = 'GPL-3'
+  gem.license = 'GPL-3.0'
 
   extra_files = %w[LICENSE]
   gem.files   = Dir.glob('{lib}/**/*') + extra_files
 
-  gem.add_dependency('qat-logger', '~> 6.0', '>= 6.0')
+  gem.add_dependency('qat-logger', '~> 6.0')
 
   gem.add_dependency('sequel', '~> 4.28')
 
