@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/readiness-it/qat-db.svg?branch=master)](https://travis-ci.org/readiness-it/qat-db)
+
 # Qat::DB
 
 - Welcome to the Qat DB gem!
