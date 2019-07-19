@@ -1,0 +1,14 @@
+postgres:
+  host: 'localhost'
+  port: 5432
+  database: 'test'
+  username: 'test'
+  password: 't3st'
+  adapter: 'postgres'
+oracle:
+  host: 'localhost'
+  port: 1521
+  database: 'orcl'
+  username: 'test'
+  password: 't3st'
+  adapter: 'oracle'
