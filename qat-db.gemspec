@@ -22,8 +22,8 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency('sequel', '~> 4.28')
 
-  gem.add_development_dependency('qat')
-  gem.add_development_dependency('qat-devel')
+  gem.add_development_dependency('qat-cucumber', '~> 6.0')
+  gem.add_development_dependency('qat-devel', '~> 6.0')
 
   gem.add_development_dependency('ruby-oci8', '~> 2.2', '>= 2.2.1')
   gem.add_development_dependency('pg', '~> 0.18', '>= 0.18.4')
