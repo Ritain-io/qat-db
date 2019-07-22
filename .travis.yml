@@ -12,8 +12,12 @@ stages:
 
 before_install:
   - sudo apt-get install alien dpkg-dev debhelper build-essential
-  - wget https://yum.oracle.com/repo/OracleLinux/OL6/oracle/instantclient/x86_64/getPackage/oracle-instantclient18.3-basic-18.3.0.0.0-3.x86_64.rpm
-  - sudo alien -i oracle-instantclient18.3-basic-18.3.0.0.0-3.x86_64.rpm
+  - wget https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.3-basic-19.3.0.0.0-1.x86_64.rpm
+  - sudo alien -i oracle-instantclient19.3-basic-19.3.0.0.0-1.x86_64.rpm
+  - wget https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.3-devel-19.3.0.0.0-1.x86_64.rpm
+  - sudo alien -i oracle-instantclient19.3-devel-19.3.0.0.0-1.x86_64.rpm
+  - wget https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.3-sqlplus-19.3.0.0.0-1.x86_64.rpm
+  - sudo alien -i oracle-instantclient19.3-sqlplus-19.3.0.0.0-1.x86_64.rpm
 # - gem install ruby-oci8
 
 jobs:
