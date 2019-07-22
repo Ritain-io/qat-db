@@ -11,7 +11,7 @@ stages:
   - release
 
 before_install:
-  - gem install ruby-oci8 -v '2.2.7' --source --without-instant-client
+  - gem install ruby-oci8 -v '2.2.7' --source 'https://rubygems.org/' --without-instant-client
 
 jobs:
   include:
