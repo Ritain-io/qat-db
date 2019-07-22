@@ -7,7 +7,7 @@ services:
       - ./data/postgres:/var/lib/postgres/data
       - ./database/config/postgres/postgres_db.yml:/usr/share/database/config/postgres/postgres_db.yml:ro
     ports:
-      - "5433:5433"
+      - "5432:5432"
     environment:
       - POSTGRES_DB=${POSTGRES_DB}
       - POSTGRES_USER=${POSTGRES_USER}
@@ -19,7 +19,7 @@ services:
       - /home/oracle/oradata:/opt/oracle/oradata
       - ./database/config/oracle/oracle_db.yml:/usr/share/database/config/oracle/oracle_db.yml:ro
     ports:
-      - "1521:1522"
+      - "1521:1521"
       - "49160:22"
     environment:
       - ORACLE_DB=${ORACLE_DB}
