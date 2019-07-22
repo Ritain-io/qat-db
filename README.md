@@ -32,7 +32,7 @@ In order to use this gem and all the functionalities it is necessary to have a f
 postgres:
   host: 'your_host_address'
   port: 8080
-  database: 'test'
+  database: 'qat_db'
   username: 'test'
   password: 't3st'
   adapter: 'postgres'
