@@ -14,7 +14,7 @@ before_install:
   - sudo apt-get install alien dpkg-dev debhelper build-essential
   - wget https://yum.oracle.com/repo/OracleLinux/OL6/oracle/instantclient/x86_64/getPackage/oracle-instantclient18.3-basic-18.3.0.0.0-3.x86_64.rpm
   - sudo alien oracle-instantclient18.3-basic-18.3.0.0.0-3.x86_64.rpm
-  - sudo dpkg -i packagename.deb
+  - sudo dpkg -i oracle-instantclient18.3-basic-18.3.0.0.0-3.x86_64.deb
 # - gem install ruby-oci8
 
 jobs:
