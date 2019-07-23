@@ -10,10 +10,16 @@ stages:
   - test
   - release
 
+# ORACLE RPM REPO: https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/index.html
 before_install:
-  #Geckodriver install:
-  - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
-  - tar -xvzf geckodriver-v0.24.0-linux64.tar.gz
+  - sudo apt-get install alien dpkg-dev debhelper build-essential
+  - wget https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.3-basic-19.3.0.0.0-1.x86_64.rpm
+  - sudo alien -i oracle-instantclient19.3-basic-19.3.0.0.0-1.x86_64.rpm
+  - wget https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.3-devel-19.3.0.0.0-1.x86_64.rpm
+  - sudo alien -i oracle-instantclient19.3-devel-19.3.0.0.0-1.x86_64.rpm
+  - wget https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.3-sqlplus-19.3.0.0.0-1.x86_64.rpm
+  - sudo alien -i oracle-instantclient19.3-sqlplus-19.3.0.0.0-1.x86_64.rpm
+  - export LD_LIBRARY_PATH=/usr/lib/oracle/19.3/client64/lib:$LD_LIBRARY_PATH
 
 jobs:
   include:
@@ -31,11 +37,9 @@ jobs:
       if: tag IS blank
 
     - name: "unit tests"
-      env: ELK_VERSION=7.2.0 ES_USER=elastic ES_PASSWD=changeme
+      env: POSTGRES_DB=qat_db POSTGRES_USER=test POSTGRES_PASSWD=t3st ORACLE_DB=xe ORACLE_USER=system ORACLE_PASSWD=oracle
       script:
         - docker-compose up -d
-        - until curl --user "$ES_USER:$ES_PASSWD" --silent -XGET --fail http://localhost:9200; do printf '.'; sleep 1; done
-        - until curl --user "$ES_USER:$ES_PASSWD" --silent -XGET --fail http://localhost:9600; do printf '.'; sleep 1; done
         - bundle exec rake qat:devel:tests:run
       if: tag IS blank
 
