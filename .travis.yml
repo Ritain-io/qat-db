@@ -40,8 +40,6 @@ jobs:
       env: POSTGRES_DB=qat_db POSTGRES_USER=test POSTGRES_PASSWD=t3st ORACLE_DB=xe ORACLE_USER=system ORACLE_PASSWD=oracle
       script:
         - docker-compose up -d
-        #- echo $POSTGRES_DB $POSTGRES_USER $POSTGRES_PASSWD $ORACLE_DB $ORACLE_USER $ORACLE_PASSWD
-        #- psql $POSTGRES_DB
         - bundle exec rake qat:devel:tests:run
       if: tag IS blank
 
