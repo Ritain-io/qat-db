@@ -39,6 +39,8 @@ jobs:
     - name: "unit tests"
       script:
         - docker-compose up -d
+        - echo $POSTGRES_DB $POSTGRES_USER $POSTGRES_PASSWD $ORACLE_DB $ORACLE_USER $ORACLE_PASSWD
+        - users
         - psql $POSTGRES_DB $POSTGRES_USER
         #- bundle exec rake qat:devel:tests:run
       if: tag IS blank
