@@ -9,7 +9,7 @@ Feature: User Story #647: PostgreSQL database support
     """
     {
       host: 'localhost',
-      port: 5433,
+      port: 5432,
       database: 'qat_db',
       username: 'test',
       password: 't3st',

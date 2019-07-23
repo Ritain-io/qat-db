@@ -10,8 +10,8 @@ Feature: User Story #633: Create and manage database connections
     """
     {
       host: 'locahost',
-      port: 5433,
-      database: 'qat_db',
+      port: 5432,
+      database: 'test',
       username: 'test',
       password: 't3st',
       adapter: 'postgres'
@@ -26,8 +26,8 @@ Feature: User Story #633: Create and manage database connections
     """
     {
       host: 'localhost',
-      port: 5433,
-      database: 'qat_db',
+      port: 5432,
+      database: 'test',
       username: 'test',
       password: 't3st',
       adapter: 'postgres'
@@ -42,7 +42,7 @@ Feature: User Story #633: Create and manage database connections
     """
     {
       host: 'localhost',
-      port: 5433,
+      port: 5432,
       username: 'test',
       password: 't3st',
       adapter: 'postgres'
@@ -58,8 +58,8 @@ Feature: User Story #633: Create and manage database connections
     """
     {
       host: 'localhost',
-      port: 5433,
-      database: 'qat_db',
+      port: 5432,
+      database: 'test',
       password: 't3st',
       adapter: 'postgres'
     }
@@ -74,8 +74,8 @@ Feature: User Story #633: Create and manage database connections
     """
     {
       host: 'lolcahost',
-      port: 5433,
-      database: 'qat_db',
+      port: 5432,
+      database: 'test',
       username: 'test',
       adapter: 'postgres'
     }
@@ -90,8 +90,8 @@ Feature: User Story #633: Create and manage database connections
     """
     {
       host: 'localhost',
-      port: 5433,
-      database: 'qat_db',
+      port: 5432,
+      database: 'test',
       username: 'test',
       password: 't3st',
     }
@@ -106,8 +106,8 @@ Feature: User Story #633: Create and manage database connections
     """
     postgres:
       host: 'localhost'
-      port: 5433
-      database: 'qat_db'
+      port: 5432
+      database: 'test'
       username: 'test'
       password: 't3st'
       adapter: 'postgres'
@@ -122,8 +122,8 @@ Feature: User Story #633: Create and manage database connections
     """
     postgres:
       host: 'localhost'
-      port: 5433
-      database: 'qat_db'
+      port: 5432
+      database: 'test'
       username: 'test'
       password: 't3st'
       adapter: 'postgres'
