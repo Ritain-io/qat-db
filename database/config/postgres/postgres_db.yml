@@ -2,6 +2,6 @@ postgres:
   host: 'localhost'
   port: 5433
   database: 'qat_db'
-  username: 'testing'
-  password: 't3sting'
+  username: 'test'
+  password: 't3st'
   adapter: 'postgres'
