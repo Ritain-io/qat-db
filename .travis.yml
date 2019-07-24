@@ -20,7 +20,6 @@ before_install:
   - wget https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.3-sqlplus-19.3.0.0.0-1.x86_64.rpm
   - sudo alien -i oracle-instantclient19.3-sqlplus-19.3.0.0.0-1.x86_64.rpm
   - export LD_LIBRARY_PATH=/usr/lib/oracle/19.3/client64/lib:$LD_LIBRARY_PATH
-  - sudo apt-get install lsnrctl
 
 jobs:
   include:
