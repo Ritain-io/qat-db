@@ -20,7 +20,8 @@ services:
       - ./database/config/oracle/oracle_db.yml:/usr/share/database/config/oracle/oracle_db.yml:ro
     ports:
       - "1522:1521"
-      - "49160:22"
+      - "5500:5500"
+      #- "49160:22"
     environment:
       - ORACLE_DB=${ORACLE_DB}
       - ORACLE_USER=${ORACLE_USER}
