@@ -7,7 +7,7 @@ services:
       - ./data/postgres:/var/lib/postgres/data
       - ./database/config/postgres/postgres_db.yml:/usr/share/database/config/postgres/postgres_db.yml:ro
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
       - POSTGRES_DB=${POSTGRES_DB}
       - POSTGRES_USER=${POSTGRES_USER}
