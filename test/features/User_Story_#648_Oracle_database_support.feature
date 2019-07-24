@@ -6,7 +6,7 @@ Feature: User Story #648: Oracle database support
     """
     {
       host: 'localhost',
-      port: 1522,
+      port: 1521,
       database: 'xe',
       username: 'system',
       password: 'oracle',
