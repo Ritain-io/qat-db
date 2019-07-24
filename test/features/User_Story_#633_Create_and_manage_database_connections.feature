@@ -10,7 +10,7 @@ Feature: User Story #633: Create and manage database connections
     """
     {
       host: 'locahost',
-      port: 5432,
+      port: 5433,
       database: 'test',
       username: 'test',
       password: 't3st',
@@ -26,7 +26,7 @@ Feature: User Story #633: Create and manage database connections
     """
     {
       host: 'localhost',
-      port: 5432,
+      port: 5433,
       database: 'test',
       username: 'test',
       password: 't3st',
@@ -42,7 +42,7 @@ Feature: User Story #633: Create and manage database connections
     """
     {
       host: 'localhost',
-      port: 5432,
+      port: 5433,
       username: 'test',
       password: 't3st',
       adapter: 'postgres'
@@ -58,7 +58,7 @@ Feature: User Story #633: Create and manage database connections
     """
     {
       host: 'localhost',
-      port: 5432,
+      port: 5433,
       database: 'test',
       password: 't3st',
       adapter: 'postgres'
@@ -74,7 +74,7 @@ Feature: User Story #633: Create and manage database connections
     """
     {
       host: 'lolcahost',
-      port: 5432,
+      port: 5433,
       database: 'test',
       username: 'test',
       adapter: 'postgres'
@@ -90,7 +90,7 @@ Feature: User Story #633: Create and manage database connections
     """
     {
       host: 'localhost',
-      port: 5432,
+      port: 5433,
       database: 'test',
       username: 'test',
       password: 't3st',
@@ -106,7 +106,7 @@ Feature: User Story #633: Create and manage database connections
     """
     postgres:
       host: 'localhost'
-      port: 5432
+      port: 5433
       database: 'test'
       username: 'test'
       password: 't3st'
@@ -122,7 +122,7 @@ Feature: User Story #633: Create and manage database connections
     """
     postgres:
       host: 'localhost'
-      port: 5432
+      port: 5433
       database: 'test'
       username: 'test'
       password: 't3st'
