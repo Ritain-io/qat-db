@@ -20,7 +20,9 @@ services:
       - ./database/config/oracle/oracle_db.yml:/usr/share/database/config/oracle/oracle_db.yml:ro
     ports:
       - "49161:1521"
+      #- "5500:5500"
     environment:
+      - ORACLE_ALLOW_REMOTE=true
       - ORACLE_DB=${ORACLE_DB}
       - ORACLE_USER=${ORACLE_USER}
       - ORACLE_PASSWD=${ORACLE_PASSWD}
