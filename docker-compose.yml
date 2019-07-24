@@ -19,8 +19,8 @@ services:
       - /home/oracle/oradata:/opt/oracle/oradata
       - ./database/config/oracle/oracle_db.yml:/usr/share/database/config/oracle/oracle_db.yml:ro
     ports:
-      - "49161:1521"
-      #- "5500:5500"
+      - "1521:1521"
+      - "5500:5500"
     environment:
       - ORACLE_ALLOW_REMOTE=true
       - ORACLE_DB=${ORACLE_DB}
