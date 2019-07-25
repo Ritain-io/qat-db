@@ -129,7 +129,7 @@ Feature: User Story #633: Create and manage database connections
       adapter: 'postgres'
     oracle:
       host: 'localhost'
-      port: 1521
+      port: 1522
       database: 'xe'
       username: 'system'
       password: 'oracle'
