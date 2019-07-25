@@ -1,6 +1,6 @@
 qat:
   host: 'localhost'
-  port: 49161
+  port: 1522
   database: 'xe'
   username: 'system'
   password: 'oracle'

@@ -1,6 +1,6 @@
 oracle:
   host: 'localhost'
-  port: 1521
+  port: 1522
   database: 'orcl'
   username: 'test'
   password: 't3st'

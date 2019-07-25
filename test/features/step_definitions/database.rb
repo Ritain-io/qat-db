@@ -2,9 +2,10 @@
 Given(/^I have a connection "([^"]*)" with info:$/) do |db_name, info|
   conn_info = eval(info)
   if db_name == 'oracle' && !ENV['JENKINS_URL']
-    if conn_info[:host] == 'localhost'
-      conn_info[:host] = %x(ip route show 0.0.0.0/0).strip.match(/via (\S+)/).captures.first
-    end
+    # Commented due to Travis-CI (Ubuntu) database TNS connection limitations
+    # if conn_info[:host] == 'localhost'
+    #  conn_info[:host] = %x(ip route show 0.0.0.0/0).strip.match(/via (\S+)/).captures.first
+    # end
     conn_info[:database] = 'orcl.168.0.181' if conn_info[:database] == 'orcl'
   end
   log.debug { conn_info }
