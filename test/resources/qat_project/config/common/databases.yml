@@ -7,7 +7,7 @@ postgres:
   adapter: 'postgres'
 oracle:
   host: 'localhost'
-  port: 1522
+  port: 1521
   database: 'orcl'
   username: 'test'
   password: 't3st'
