@@ -5,7 +5,7 @@ puts 'Start checking for databases to be up...'
 
 @result = 1
 
-(1..12).each do |i|
+(1..20).each do |i|
   pg_conn = PG::Connection.ping('localhost', ENV['POSTGRES_PORT'], nil, nil, ENV['POSTGRES_DB'], ENV['POSTGRES_USER'], ENV['POSTGRES_PASSWD'])
 
   oracle_conn = OCI8.new(ENV['ORACLE_USER'], ENV['ORACLE_PASSWD'], "//localhost:#{ENV['ORACLE_PORT']}/#{ENV['ORACLE_DB']}") rescue OCIError
@@ -15,7 +15,7 @@ puts 'Start checking for databases to be up...'
     break
   end
 
-  puts "Check number #{i} of 12 failed. Retrying..."
+  puts "Check number #{i} of 20 failed. Retrying..."
 
   sleep 5
 end
