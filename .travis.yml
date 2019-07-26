@@ -40,7 +40,6 @@ jobs:
       env: POSTGRES_DB=qat_db POSTGRES_USER=test POSTGRES_PASSWD=t3st POSTGRES_PORT=5433 RACLE_DB=xe ORACLE_USER=system ORACLE_PASSWD=oracle ORACLE_PORT=1522
       script:
         - docker-compose up -d
-        #- echo 'Waiting for both databases to be up...' && sleep 60
         - ruby db_check.rb
         - bundle exec rake qat:devel:tests:run
       if: tag IS blank
