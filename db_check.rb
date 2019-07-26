@@ -1,13 +1,28 @@
 require 'pg'
 require 'ruby-oci8'
 
+puts 'Start checking for databases to be up...'
 
-(0..60).each do
-  pg_conn = PG::Connection.ping('localhost', POSTGRES_PORT, nil, nil, POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWD)
+@result = 1
 
-  oracle_conn = OCI8.new(ORACLE_USER, ORACLE_PASSWD, "//localhost:#{ORACLE_PORT}/#{ORACLE_DB}") rescue OCIError
+(1..12).each do |i|
+  pg_conn = PG::Connection.ping('localhost', ENV['POSTGRES_PORT'], nil, nil, ENV['POSTGRES_DB'], ENV['POSTGRES_USER'], ENV['POSTGRES_PASSWD'])
 
-  break if pg_conn == 0 && oracle_conn != OCIError
+  oracle_conn = OCI8.new(ENV['ORACLE_USER'], ENV['ORACLE_PASSWD'], "//localhost:#{ENV['ORACLE_PORT']}/#{ENV['ORACLE_DB']}") rescue OCIError
 
-  sleep 1
+  if pg_conn == 0 && oracle_conn != OCIError
+    @result = 0
+    break
+  end
+
+  puts "Check number #{i} of 12 failed. Retrying..."
+
+  sleep 5
+end
+
+if @result == 0
+  puts 'Databases are up !!'
+else
+  puts 'Databases failed to be up !!'
+  `travis_terminate 1`
 end
