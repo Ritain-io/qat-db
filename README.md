@@ -47,7 +47,7 @@ oracle:
 
 # Documentation
 
-- [API documentation](https://readiness-it.github.io/qat-db/doc/index.html)
+- [API documentation](https://readiness-it.github.io/qat-db/)
 
 
 For more information check [Sequel gem documentation](https://github.com/jeremyevans/sequel).
