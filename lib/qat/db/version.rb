@@ -5,6 +5,6 @@ module QAT
   #@since 1.1.0
   class DB
     # QAT::DB Version
-    VERSION = '6.0.0'
+    VERSION = '7.0.0'
   end
 end
